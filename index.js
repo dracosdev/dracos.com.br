@@ -9,5 +9,5 @@ app.get("/game", function(req, res){
 	res.sendFile(__dirname + "/game/index.html");
 });
 
-app.listen(8080);
-console.log('Servidor rodando na porta 8080...');
+app.listen(3000);
+console.log('Servidor rodando na porta 3000...');

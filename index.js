@@ -13,3 +13,5 @@ app.get("/game", function(req, res){
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`)
 });
+
+app.use(express.static(__dirname + '/game'))

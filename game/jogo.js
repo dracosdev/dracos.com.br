@@ -72,8 +72,8 @@ const flappyBird = {
   desenha() {
     contexto.drawImage(
       sprites,
-      flappyBird.spriteX, flappyBird.spriteY, // Sprite X, Sprite Y
-      flappyBird.largura, flappyBird.altura, // Tamanho do recorte na sprite
+      flappyBird.spriteX, flappyBird.spriteY,
+      flappyBird.largura, flappyBird.altura,
       flappyBird.x, flappyBird.y,
       flappyBird.largura, flappyBird.altura,
     );

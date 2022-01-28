@@ -14,4 +14,5 @@ app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`)
 });
 
+// expõe publicamente a pasta game
 app.use(express.static(__dirname + '/game'))

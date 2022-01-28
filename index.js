@@ -11,5 +11,5 @@ app.get("/game", function(req, res){
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Servidor rodando na porta ${port}`)
 });

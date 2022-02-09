@@ -22,4 +22,4 @@ app.listen(port, () => {
 // Expõe as pastas publicamente
 app.use(express.static(__dirname + '/game'))
 app.use(express.static(__dirname + '/ame'))
-
+app.use(express.static(__dirname + '/site'))

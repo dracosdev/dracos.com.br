@@ -1,40 +1,4 @@
-fetch('https://miniapps.hml.amedigital.com/miniapp-manager-api/o/mini-apps/')
-  .then(result => result.json())
-  .then((output) => {
-
-    let min = Infinity
-    let url = ''
-
-    let componentsVersions = {}
-    output.miniApps.forEach(miniApp => {
-        if (!miniApp.revisions) return;
-        miniApp.revisions.forEach(revision => {
-            if (min > revision.createdAt && revision.cliComponentsVersion) {
-                min = revision.createdAt
-                url = revision.url
-            }
-            if (revision.status === 'PUBLISHED') {
-                const compVersion = revision.cliComponentsVersion || 'NA'
-                const current = componentsVersions[compVersion] || 0;
-                componentsVersions[compVersion] = current + 1
-            }
-        })
-    })
-    // console.log(min)
-    // console.log(url)
-    console.log('Componentes: ', componentsVersions)
-    console.log('Miniapps: ', output);
-
-  }).catch(err => console.error(err));
-
-
-
-
-
-
-
-
-// sistema de janelas
+// Window system
 
 var i = 0,
 minimizedWidth = new Array,
@@ -101,7 +65,7 @@ function openMinimized(id) {
   });       
 }
 
-// Template de janela
+// Window template
 $(document).ready(function(){
   $(".window").each(function() {
     $(this).css('z-index',1000)

@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/djmacloud/dracos.com.br#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "js-xlsx": "^0.8.22"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

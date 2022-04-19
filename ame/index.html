@@ -8,8 +8,10 @@
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.core.min.js"></script>
-	<script src="index.js"></script>
-	<script src="ongs.js"></script>
+	<script src="windows.js"></script>
+	<script src="functions.js"></script>
+	<!-- <script src="ongs.js"></script> -->
+	<script src="config.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<title>Miniapps Overview</title>
 </head>
@@ -21,11 +23,18 @@
 		</div>
 		
 		<div class="window" data-title="Exportar">
-			<button onclick="exportOngs()">Exportar Miniapps</button>
+			<h1>Selecione os campos à exportar:</h1>
+			<input type="checkbox" disabled="true" class=" form form_checkbox">
+			<input type="checkbox" disabled="true" class=" form form_checkbox">
+			<input type="checkbox" disabled="true" class=" form form_checkbox">
+			<input type="checkbox" disabled="true" class=" form form_checkbox">
+			<input type="checkbox" disabled="true" class=" form form_checkbox">
+			<!-- <button onclick="exportOngs()">Exportar Miniapps</button> -->
 		</div>
 		
 		<div class="window closed" data-title="Filtrar">
-			Filtrar
+			<button onclick="testMiniapps('prod')">Testar Miniapps</button>
+
 		</div>
 		
 		<div id="taskbar">		

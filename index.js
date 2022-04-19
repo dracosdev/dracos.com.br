@@ -15,6 +15,10 @@ app.get("/ame", function(req, res){
 	res.sendFile(__dirname + "/ame/index.html");
 });
 
+app.get("/ongs", function(req, res){
+	res.sendFile(__dirname + "/ame/ongs.json");
+});
+
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`)
 });

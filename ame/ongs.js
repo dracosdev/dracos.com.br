@@ -6,7 +6,6 @@ async function getOngsPk(){
     return fetch('/ongs').then(result => result.json())
 }
 
-
 async function getOngs(){
     const output = await getMiniapps()
     const ongsSelection = await getOngsPk()
@@ -19,9 +18,7 @@ async function getOngs(){
         
     })
     
-    console.log(ongs)
     return ongs
-    
 }
 
 async function exportOngs(){
@@ -37,7 +34,4 @@ async function exportOngs(){
     XLSX.writeFile(wb, `ongs-exported.xlsx`)
 }
 
-
-
-getOngs()
-// exportOngs()
+console.log(getOngs())

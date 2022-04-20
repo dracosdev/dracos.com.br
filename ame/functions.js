@@ -2,23 +2,43 @@ const devUrl = 'https://miniapps.dev.amedigital.com/miniapp-manager-api/o/mini-a
 const hmlUrl = 'https://miniapps.hml.amedigital.com/miniapp-manager-api/o/mini-apps/';
 const prodUrl = 'https://miniapps.amedigital.com/miniapp-manager-api/o/mini-apps/';
 
-function getDevMiniapps() { return fetch(devUrl).then(result => result.json()); }
-function getHmlMiniapps() { return fetch(hmlUrl).then(result => result.json()); }
-function getProdMiniapps() { return fetch(prodUrl).then(result => result.json()); }
+function mountMiniapp(miniappObj){
+    let miniapp = `
+        <div>
+            <p>ID: ${miniappObj.id}</p>
+            <p>TITLE: ${miniappObj.title}</p>
+            <p>SLUG: ${miniappObj.slug}</p>
+            <p>TYPE: ${miniappObj.type}</p>
+            <p>STATUS: ${miniappObj.status}</p>
+            <p>FT: ${miniappObj.featureToggleKey}</p>
+            <p>VISIBLE: ${miniappObj.visible}</p>
+        </div>
+    `;
+    return miniapp
+}
 
+function getMiniapps(envUrl){
+    return fetch(envUrl).then(result => result.json());
+}
 
-async function getMiniapps(env){
-    let fullList;
-    
-    if (env === 'dev'){
-        fullList = await getDevMiniapps();
-    } else if (env === 'hml') {
-        fullList =  await getHmlMiniapps();
-    } else if (env === 'prod'){
-        fullList =  await getProdMiniapps();
-    }
-
-    return fullList;
+async function loadMiniapps(envUrl){
+    document.getElementById('loading').style.display = 'flex';
+    let miniappsList = await getMiniapps(envUrl);
+    document.getElementById('loading').style.display = 'none';
+    miniappsList.miniApps.forEach(miniappObj => {
+        let miniapp = `
+            <div class="miniappCard">
+                <p>ID: ${miniappObj.id}</p>
+                <p>TITLE: ${miniappObj.title}</p>
+                <p>SLUG: ${miniappObj.slug}</p>
+                <p>TYPE: ${miniappObj.type}</p>
+                <p>STATUS: ${miniappObj.status}</p>
+                <p>FT: ${miniappObj.featureToggleKey}</p>
+                <p>VISIBLE: ${miniappObj.visible}</p>
+            </div>
+        `;
+        document.getElementById('miniappList').innerHTML += miniapp;
+    });
 }
 
 async function filterMiniapps(){
@@ -30,8 +50,8 @@ async function exportMiniapps(){
     
 }
 
-function testMiniapps(url){
-    console.log(getMiniapps(url));
+function testMiniapps(envUrl){
+    console.log(loadMiniapps(envUrl));
 }
 
 

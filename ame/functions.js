@@ -17,6 +17,17 @@ function mountMiniapp(miniappObj){
     return miniapp
 }
 
+function Miniapp () {
+    this.id = 'id';
+    this.title = 'title';
+    this.slug = 'slug';
+    this.type = 'type';
+    this.status = 'status';
+    this.featureToggleKey = 'FT';
+    this.visible = 'visible';
+}
+
+
 function getMiniapps(envUrl){
     return fetch(envUrl).then(result => result.json());
 }
@@ -56,18 +67,5 @@ async function exportMiniapps(){
     wb.Sheets['Ongs'] = sheetContent
 
 
-    XLSX.writeFile(wb, `ongs-exported.xlsx`)
+    XLSX.writeFile(wb, `miniapps-exported.xlsx`)
 }
-
-
-// loop for ongs filtering
-/*
-fullList.miniApps.forEach(miniApp => {
-    
-    if ( ongsSelection.includes(miniApp.publicKey) ) {
-        ongs.push({name:miniApp.name, title:miniApp.title, slug:miniApp.slug, parentSlug:miniApp.parentSlug, category1:miniApp.category1, category2:miniApp.category2, description:miniApp.description, featureToggleKey:miniApp.featureToggleKey, publicKey:miniApp.publicKey})
-    }
-    
-    
-})
-*/

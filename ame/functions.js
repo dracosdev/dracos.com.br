@@ -47,11 +47,16 @@ async function filterMiniapps(){
 
 
 async function exportMiniapps(){
-    
-}
+    const listOngs = await getOngs()
 
-function testMiniapps(envUrl){
-    console.log(loadMiniapps(envUrl));
+    let wb = XLSX.utils.book_new();
+    wb.SheetNames.push('Ongs')
+
+    const sheetContent = XLSX.utils.json_to_sheet(listOngs)
+    wb.Sheets['Ongs'] = sheetContent
+
+
+    XLSX.writeFile(wb, `ongs-exported.xlsx`)
 }
 
 

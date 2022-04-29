@@ -10,40 +10,36 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.core.min.js"></script>
 	<script src="windows.js"></script>
 	<script src="functions.js"></script>
-	<!-- <script src="ongs.js"></script> -->
-	<script src="config.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<title>Miniapps Overview</title>
 </head>
 <body>
 	<div id="desktop">
 
-		<div class="window" data-title="Overview">
-			Visão Geral
-		</div>
+		<div class="window" data-title="Overview"></div>
 		
-		<div class="window" data-title="Exportar">
-			<h1>Selecione os campos à exportar:</h1>
-			<input type="checkbox" disabled="true" class=" form form_checkbox">
-			<input type="checkbox" disabled="true" class=" form form_checkbox">
-			<input type="checkbox" disabled="true" class=" form form_checkbox">
-			<input type="checkbox" disabled="true" class=" form form_checkbox">
-			<input type="checkbox" disabled="true" class=" form form_checkbox">
-			<!-- <button onclick="exportOngs()">Exportar Miniapps</button> -->
+		<div class="window" data-title="Miniapps">
+			<button onclick="testMiniapps(hmlUrl)">Load Miniapps</button>
+			<div id="loading" style="display: none;">
+				<img src="img/hourglass.gif" alt="Loading animated hourglass icon spinning">
+				<p>Loading...</p>
+			</div>
+			<div id="miniappList"></div>
 		</div>
-		
-		<div class="window closed" data-title="Filtrar">
-			<button onclick="testMiniapps('prod')">Testar Miniapps</button>
 
+		<div class="window closed" data-title="Export">
+			<h1>Select fields to export:</h1>
+			<button onclick="exportOngs()">Export List</button>
 		</div>
 		
-		<div id="taskbar">		
-		</div>
-		
+		<div class="window closed" data-title="Filter"></div>
+
+		<div id="taskbar"></div>
 		<div id="icons">
 			<a class="openWindow" data-id="0">Overview</a>
-			<a class="openWindow" data-id="1">Exportar</a>
-			<a class="openWindow" data-id="2">Filtrar</a>
+			<a class="openWindow" data-id="1">Miniapps</a>
+			<a class="openWindow" data-id="2">Export</a>
+			<a class="openWindow" data-id="3">Filter</a>
 		</div>
 	</div>
 </body>

@@ -22,6 +22,8 @@ function Miniapp () {
     this.title = 'title';
     this.slug = 'slug';
     this.type = 'type';
+    this.target = 'target';
+    this.permission = 'permission';
     this.status = 'status';
     this.featureToggleKey = 'FT';
     this.visible = 'visible';
@@ -42,10 +44,12 @@ async function loadMiniapps(envUrl){
                 <p>ID: ${miniappObj.id}</p>
                 <p>TITLE: ${miniappObj.title}</p>
                 <p>SLUG: ${miniappObj.slug}</p>
-                <p>TYPE: ${miniappObj.type}</p>
                 <p>STATUS: ${miniappObj.status}</p>
-                <p>FT: ${miniappObj.featureToggleKey}</p>
                 <p>VISIBLE: ${miniappObj.visible}</p>
+                <p>TYPE: ${miniappObj.type}</p>
+                <p>TARGET: ${miniappObj.target}</p>
+                <p>PERMISSIONS: ${miniappObj.permissions}</p>
+                <p>FT: ${miniappObj.featureToggleKey}</p>
             </div>
         `;
         document.getElementById('miniappList').innerHTML += miniapp;

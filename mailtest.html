@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+    *{background-color: rgb(255, 255, 255);font-family: Arial, Helvetica, sans-serif;font-size: 12px;}
+    body {width: 760px;}
+    h1 {background: #c2c7c9;text-align: center;size: 12px;}
+    table {width: 100%;line-height: 24px;}
+</style> 
+ </head>
+ <body> 
+  <table>
+   <tbody>
+    <tr>
+     <td style="text-align:center;vertical-align:left"><img src="https://calindra.tech/ame/email-veus-miniapp/logoame.png" alt="Ame" /></td> 
+     <td style="text-align:center;vertical-align:left"><img width="200px" src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Metlife_logo.jpg" alt="MetLife" /></td> 
+    </tr>
+   </tbody>
+  </table> 
+  <h1> BILHETE DE SEGURO<br />SEGURO BOLSA E/OU CART&Atilde;O PROTEGIDO</h1> 
+  <table>
+   <tbody>
+    <tr>
+     <td></td>
+     <td>.05193</td>
+     <td>CORRETOR N&ordm; DE REGISTRO - SUSEP:</td>
+     <td id="var-susep"></td>
+    </tr>
+   </tbody>
+  </table> 
+  <table>
+   <tbody>
+    <tr>
+     <td>N&ordm; DO BILHETE:</td>
+     <td id="var-billet"></td>
+     <td>DATA DE EMISS&Atilde;O:</td>
+     <td id="var-startdate"></td>
+    </tr>
+   </tbody>
+  </table> 
+  <h1> DADOS DO SEGURADO</h1> 
+  <table>
+   <tbody>
+    <tr>
+     <td>NOME DO SEGURADO / T&Iacute;TULAR DO CART&Atilde;O:</td>
+     <td id="var-mainperson"></td>
+    </tr>
+   </tbody>
+  </table> 
+  <table>
+   <tbody>
+    <tr>
+     <td>DATA DE NASCIMENTO:</td>
+     <td id="var-birthdate"></td>
+     <td>NACIONALIDADE</td>
+     <td id="var-birthplace"></td>
+     <td>CPF</td>
+     <td id="var-cpf"></td>
+     <td>IDENTIDADE/PASSAPORTE</td>
+     <td id="var-id"></td>
+    </tr>
+   </tbody>
+  </table> 
+  <table>
+   <tbody>
+    <tr>
+     <td>ENDERE&Ccedil;O (RUA, AVENIDA, ETC):</td>
+     <td id="var-address"></td>
+    </tr>
+   </tbody>
+  </table> 
+  <table>
+   <tbody>
+    <tr>
+     <td>CIDADE</td>
+     <td id="var-city"></td>
+     <td>BAIRRO</td>
+     <td id="var-neighborhood"></td>
+     <td>UF</td>
+     <td id="var-state"></td>
+     <td>CEP</td>
+     <td id="var-zipcode"></td>
+    </tr>
+   </tbody>
+  </table> 
+  <table>
+   <tbody>
+    <tr>
+     <td>TELEFONE:</td>
+     <td id="var-phone"></td>
+     <td>EMAIL:</td>
+     <td id="var-email"></td>
+    </tr>
+   </tbody>
+  </table> 
+  <h1> COBERTURAS CONTRATADAS E LIMITE M&Aacute;XIMO DE GARANTIA</h1> 
+  <table>
+   <tbody>
+    <tr>
+     <td>COBERTURAS DO SEGURO</td>
+     <td>LIMITE M&Aacute;XIMO DE GARANTIA</td>
+     <td>PR&Ecirc;MIO L&Iacute;QUIDO (R$)</td>
+     <td>IOF 7,38% (R$) </td>
+     <td>PR&Ecirc;MIO TOTAL</td>
+    </tr>
+   </tbody>
+  </table> 
+  <table>
+   <tbody>
+    <tr>
+     <td>Saque ou Compra Sob Coa&ccedil;&atilde;o</td>
+     <td>XXX</td>
+     <td>XXX</td>
+     <td>XXX</td>
+     <td>XXX</td>
+    </tr>
+   </tbody>
+  </table> 
+  <table>
+   <tbody>
+    <tr>
+     <td>Perda, roubo ou Furto Cart&atilde;o</td>
+     <td>XXX</td>
+     <td>XXX</td>
+     <td>XXX</td>
+     <td>XXX</td>
+    </tr>
+   </tbody>
+  </table> 
+  <table>
+   <tbody>
+    <tr>
+     <td>D&eacute;bitos Indevidos</td>
+     <td>XXX</td>
+     <td>XXX</td>
+     <td>XXX</td>
+     <td>XXX</td>
+    </tr>
+   </tbody>
+  </table> 
+  <table>
+   <tbody>
+    <tr>
+     <td>Bolsa Protegida</td>
+     <td>XXX</td>
+     <td>XXX</td>
+     <td>XXX</td>
+     <td>XXX</td>
+    </tr>
+   </tbody>
+  </table> 
+  <h1> DEMONSTRATIVO DE PR&Ecirc;MIO - VALORES EM R$</h1> 
+  <table>
+   <tbody>
+    <tr>
+     <td>PR&Ecirc;MIO TOTAL</td>
+     <td>FORMA DE PAGAMENTO:</td>
+     <td>PR&Ecirc;MIO L&Iacute;QUIDO (R$)</td>
+     <td>N&ordm; DE PARCELAS:</td>
+     <td>DIA DO VENCIMENTO:</td>
+    </tr>
+   </tbody>
+  </table> 
+  <table>
+   <tbody>
+    <tr>
+     <td>PR&Ecirc;MIO TOTAL</td>
+     <td id="var-totalprize"></td>
+    </tr>
+   </tbody>
+  </table> 
+  <h1>VIG&Ecirc;NCIA</h1> 
+  <table>
+   <tbody>
+    <tr>
+     <td>IN&Iacute;CIO DA VIG&Ecirc;NCIA &Agrave;S 24 HORAS DA DATA:</td>
+     <td id="var-initdate"></td>
+     <td>FINAL DE VIG&Ecirc;NCIA :</td>
+     <td id="var-enddate"></td>
+    </tr>
+   </tbody>
+  </table> 
+  <table>
+   <tbody>
+    <tr>
+     <td>*Este seguro possui vig&ecirc;ncia de 12 (doze) meses, podendo ser renovado por igual per&iacute;odo.</td>
+    </tr>
+   </tbody>
+  </table> 
+  <h1>CAR&Ecirc;NCIAS E FRANQUIAS</h1> 
+  <table>
+   <tbody>
+    <tr>
+     <td>A cobertura de BOLSA PROTEGIDA poder&aacute; haver car&ecirc;ncia de at&eacute; 90 dias..</td>
+    </tr>
+   </tbody>
+  </table> 
+  <h1>DADOS DO PAGAMENTO</h1> 
+  <table>
+   <tbody>
+    <tr>
+     <td>VENCIMENTO</td>
+     <td id="var-paymentenddate"></td>
+     <td>FORMA DE PAGAMENTO</td>
+     <td id="var-paymenttype"></td>
+     <td>BANCO</td>
+     <td id="var-bank"></td>
+     <td>AG&Ecirc;NIA</td>
+     <td id="var-agency"></td>
+    </tr>
+   </tbody>
+  </table> 
+  <h1>S&Iacute;NTESE DAS CONDI&Ccedil;&Otilde;ES GERAIS DO SEGURO BOLSA E CART&Atilde;O PROTEGIDOS</h1> 
+  <h2>OBJETIVO DO SEGURO:</h2> 
+  <p>O presente Seguro tem por objetivo propiciar ao Segurado, o pagamento de indeniza&ccedil;&atilde;o ou reembolso de despesas at&eacute; o valor do Limite M&aacute;ximo de Indeniza&ccedil;&atilde;o contratada para cada cobertura constante no Bilhete de Seguro, conforme coberturas descritas nas constantes nestas Condi&ccedil;&otilde;es Gerais. A Seguradora garantir&aacute;, at&eacute; o Limite M&aacute;ximo de Indeniza&ccedil;&atilde;o, o pagamento de indeniza&ccedil;&atilde;o no caso de ocorr&ecirc;ncia dos eventos previstos e cobertos pelo Seguro, desde que devidamente comprovados, exceto se decorrente de Riscos Exclu&iacute;dos.</p> 
+  <h2>RISCOS COBERTOS:</h2> 
+  <p>O presente Seguro possui as Coberturas: a) Saque ou Compra sob Coa&ccedil;&atilde;o. b) Perda Roubo ou Furto de Cart&atilde;o, c) D&eacute;bitos Indevidos, d) Bolsa Protegida.A cobertura SAQUE OU COMPRA SOB COA&Ccedil;&Atilde;O propicia ao Titular do Cart&atilde;o o pagamento das perdas apuradas e comprovadas que diretamente sofra, at&eacute; o limite M&aacute;ximo de Indeniza&ccedil;&atilde;o especificado neste Bilhete de Seguro, quando compelido a sacar ou realizar compras Sob Coa&ccedil;&atilde;o, por algu&eacute;m que tenha causado ou amea&ccedil;ado causar ao titular do Cart&atilde;o ou a algum familiar um dano corporal e, os d&eacute;bitos tenham sido efetuados no per&iacute;odo de 96(noventaeseis) horas imediatamente anteriores ao bloqueio do cart&atilde;o junto &agrave; administradora. A cobertura de PERDA, ROUBO OU FURTO DE CART&Atilde;O cobre o reembolso dos d&eacute;bitos indevidamente efetuados na conta do Titular do Cart&atilde;o junto ao Emissor quando da ocorr&ecirc;ncia de perda, roubo ou furto do cart&atilde;o, desde que os d&eacute;bitos tenham ocorrido em at&eacute; 96 (noventa e seis) horas imediatamente anteriores ao bloqueio do cart&atilde;o junto &agrave; administradora.Para a an&aacute;lise do pagamento da Indeniza&ccedil;&atilde;o das coberturas acima, al&eacute;m dos documentos dispostos nas Condi&ccedil;&otilde;es Gerais do Seguro, ser&aacute; necess&aacute;ria a apresenta&ccedil;&atilde;o dos seguintes documentos: a)Boletim de Ocorr&ecirc;ncia Policial original ou c&oacute;pia autenticada, no qual devem ser especificados detalhadamente, o local do sinistro, sua descri&ccedil;&atilde;o, data e hora em que o saque ou compra sob coa&ccedil;&atilde;o ocorreu; b)Extrato banc&aacute;rio, comprovando o saque; e c) Demonstrativo de compras efetuadas atrav&eacute;s do cart&atilde;o emitido em nome do Segurado.A cobertura D&Eacute;BITOS INDEVIDOS garante ao Segurado, reembolso limitado a valor contratado de seguro, causados por transfer&ecirc;ncias de valores da conta do segurado para conta de terceiros (ocorridas por PIX, TED ou DOC, atrav&eacute;s de internet banking ou aplicativos de celular), pagamentos de boletos e carga de cr&eacute;dito em telefonia m&oacute;vel, desde que ocorrida mediante Coa&ccedil;&atilde;o ao segurado envolvendo amea&ccedil;a a sua integridade f&iacute;sica.A cobertura BOLSA PROTEGIDA estar&atilde;o cobertos, conforme definido no Bilhete de Seguro, os custos de reposi&ccedil;&atilde;o dos artigos cobertos que forem subtra&iacute;dos durante o evento de Roubo ou Furto qualificado da Bolsa ou Mochila, sendo eles: Bolsa; Carteira; Telefone Celular; &Oacute;culos de Sol ou de Grau; Cosm&eacute;ticos; Perfume; Chaves, que estar&aacute; limitado ao custo de reposi&ccedil;&atilde;o das fechaduras que proporcionem acesso a uma resid&ecirc;ncia ou carro do segurado e custos para reposi&ccedil;&atilde;o dos documentos, especificados nas Condi&ccedil;&otilde;es Gerais do Seguro. </p> 
+  <h2>RISCOS EXCLU&Iacute;DOS:</h2> 
+  <p>Al&eacute;m das exclus&otilde;es constantes das Condi&ccedil;&otilde;es Gerais, estar&atilde;o exclu&iacute;dos:Furto simples; Danos morais; Danos corporais; Lucros cessantes; Pagamento de custos, taxas ou outras despesas incorridas para comunicar uma ocorr&ecirc;ncia; N&atilde;o pagamento completo ou parcial, ou inadimplemento de qualquer empr&eacute;stimo, d&iacute;vida ou opera&ccedil;&atilde;o semelhante ou equivalente a empr&eacute;stimo feito pelo, ou para o segurado titular do cart&atilde;o; Quaisquer preju&iacute;zos atribu&iacute;veis a fundo insuficientes na conta do segurado; Erros ocasionados por falha sist&ecirc;mica do Emissor; Quaisquer danos ao emissor ou a algum terceiro; Quaisquer despesas relacionadas a qualquer a&ccedil;&atilde;o judicial ou procedimentos administrativos; Qualquer fraude da administradora de cart&atilde;o ou de estabelecimento, ou de comerciante; Confisco, destrui&ccedil;&atilde;o, ou embargo de bens, por qualquer &oacute;rg&atilde;o governamental, entidade p&uacute;blica, reparti&ccedil;&atilde;o, &oacute;rg&atilde;o auto regulador, comiss&atilde;o ou um representante autorizado de qualquer um dos acima mencionados; Transa&ccedil;&otilde;es realizadas atrav&eacute;s de cart&otilde;es clonados e/ou dubl&ecirc;s e/ou falsifica&ccedil;&atilde;o do cart&atilde;o segurado; Anuidades ou quaisquer outras tarifas do cart&atilde;o segurado; Despesas realizadas atrav&eacute;s de cart&otilde;es perdidos, roubados ou extraviados enquanto estiverem sob a responsabilidade do correio, de empresas transportadoras ou ainda, atrav&eacute;s de cart&otilde;es que n&atilde;o foram distribu&iacute;dos pela administradora do cart&atilde;o; Transa&ccedil;&otilde;es ocorridas em terminais eletr&ocirc;nicos cujo acesso seja feito por meio de c&oacute;digo pessoal e secreto (senha), exceto se comprovada a coa&ccedil;&atilde;o; N&atilde;o pagamento completo ou parcial, ou inadimplemento de qualquer empr&eacute;stimo, d&iacute;vida ou opera&ccedil;&atilde;o semelhante ou equivalente a empr&eacute;stimo feito pelo, ou para o titular do cart&atilde;o; Quaisquer preju&iacute;zos atribu&iacute;veis a fundo insuficiente na conta do segurado; Quaisquer danos ao emissor ou a algum terceiro; Coa&ccedil;&atilde;o em que o Segurado n&atilde;o seja a pr&oacute;pria v&iacute;tima, mesmo que a pessoa portadora do dispositivo m&oacute;vel tenha sido por ele autorizada a utiliz&aacute;-lo, inclusive outro titular da conta conjunta se for o caso. Para seguros contratados por pessoas jur&iacute;dicas, o disposto aplica-se aos S&oacute;cios Controladores, aos seus Dirigentes e Administradores Legais, e seus respectivos Representantes Legais.</p> 
+  <table>
+   <tbody>
+    <tr>
+     <td>Benef&iacute;cios Contratados: </td>
+     <td>Sorteio Mensal: R$ 5.000,00 (cinco mil reais)</td>
+     <td>N&ordm; DE SORTEIO :</td>
+     <td id="var-luckynumber"></td>
+    </tr>
+   </tbody>
+  </table> 
+  <p>Sorteios garantidos pela CNP Capitaliza&ccedil;&atilde;o S/A, CNPJ: 01.599/0001-71.</p> 
+  <h1>INFORMA&Ccedil;&Otilde;ES AO SEGURADO</h1> 
+  <p>Seguro administrado pela Companhia de Seguros Previd&ecirc;ncia do Sul S.A-CNPJ: 92.751.213/0001-73 – Reg. SUSEP: 05193 – Ramo: 0171 (Riscos Diversos- Seguro Bolsa e/ou Cart&atilde;o Protegidos) - n&ordm; Processo SUSEP: 15414.901220/2018-03. O registro deste plano na SUSEP n&atilde;o implica, por parte da Autarquia, incentivo ou recomenda&ccedil;&atilde;o &agrave; sua comercializa&ccedil;&atilde;o. Este seguro poder&aacute; ser cancelado no prazo de 7 (sete) dias corridos, a contar da data da ades&atilde;o ao contrato, com direito a devolu&ccedil;&atilde;o do pr&ecirc;mio pago, monetariamente atualizado. Restri&ccedil;&otilde;es se aplicam. Consulte as Condi&ccedil;&otilde;es Gerais do Seguro antes de contrat&aacute;-lo.As Condi&ccedil;&otilde;es Gerais, a situa&ccedil;&atilde;o cadastral do corretor de seguros e da sociedade seguradora podem ser consultadas no s&iacute;tio eletr&ocirc;nico www.susep.gov.br. Este seguro poder&aacute; ser distribu&iacute;do e ofertado pelo representante de Seguros, em car&aacute;ter n&atilde;o eventual e sem v&iacute;nculos de depend&ecirc;ncia &agrave; conta e em nome de sociedade seguradora. A sociedade seguradora remunera seus intermedi&aacute;rios em at&eacute; 40% pela comercializa&ccedil;&atilde;o do Seguro Bolsa Protegida. </p> 
+  <h2>PROTE&Ccedil;&Atilde;O DE DADOS PESSOAIS</h2> 
+  <p>A Previsul informa que os dados pessoais coletados ser&atilde;o utilizados para o cumprimento das obriga&ccedil;&otilde;es contratuais, fins regulat&oacute;rios e atendimento aos nossos leg&iacute;timos interesses, respeitando sempre as suas expectativas, conforme nossa Pol&iacute;tica de Privacidade (publicada no site https://portalprivacidade.cnpbrasil.com.br/s/).</p> 
+  <h1>DECLARA&Ccedil;&Atilde;O DO PROPONENTE</h1> 
+  <p>Declaro que as informa&ccedil;&otilde;es contidas neste bilhete s&atilde;o verdadeiras e completas e assumo total responsabilidade pela sua exatid&atilde;o.No ato da assinatura deste bilhete tomei conhecimento do teor das Condi&ccedil;&otilde;es Gerais.</p> 
+  <h1>CANAIS DE ATENDIMENTO</h1> 
+  <p>Fale com a gente em 0800 272 2272 / SAC - 0800 722 0264, todos os dias da semana, 24 horas por dia, inclusive em feriados nacionais. As liga&ccedil;&otilde;es podem ser a cobrar. Ouvidoria - 0800 722 0266, de segunda-feira a sexta-feira, das 8h &agrave;s 18h, exceto feriados nacionais. Atendimento ao surdo: +55 (61) 2107-7176 , fa&ccedil;a a chamada a partir de um aparelho adaptado com teclado alfanum&eacute;rico. De segunda-feira a sexta-feira, das 8h &agrave;s 18h, exceto feriados nacionais. Link da plataforma digital oficial para registro de reclama&ccedil;&otilde;es dos consumidores dos mercados supervisionados. (www.consumidor.gov.br).</p> 
+  <table>
+   <tbody>
+    <tr>
+     <td><img width="100%" src="https://s3.amazonaws.com/seguros.miniapp.ame/assinatura1_seg_pix.png" /></td> 
+     <td><img width="100%" style="padding-top:38px" src="https://s3.amazonaws.com/seguros.miniapp.ame/assinatura2_seg_pix.png" /></td> 
+    </tr>
+   </tbody>
+  </table> 
+ </body>
+</html>

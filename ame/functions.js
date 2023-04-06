@@ -1,6 +1,6 @@
-const devUrl = 'https://miniapps.dev.amedigital.com/miniapp-manager-api/o/mini-apps/';
-const hmlUrl = 'https://miniapps.hml.amedigital.com/miniapp-manager-api/o/mini-apps/';
-const prodUrl = 'https://miniapps.amedigital.com/miniapp-manager-api/o/mini-apps/';
+const devUrl = vars.DEVURL;
+const hmlUrl = vars.HMLURL;
+const prodUrl = vars.PRDURL;
 
 function mountMiniapp(miniappObj){
     let miniapp = `

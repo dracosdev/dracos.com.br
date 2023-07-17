@@ -1,0 +1,2 @@
+const bfftoken = secrets.BFFTOKEN;
+

@@ -15,7 +15,12 @@
 <script src="https://chatbot.cea-ecommerce.com.br/troca-devolucao/bundle_chatbot.js"></script>
 
 <script>
-    window.loadChatbotLogado('V66930093CEA-01', 'app-cliente')
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+
+    document.addEventListener('DOMContentLoaded', function() {
+        window.loadChatbotLogado(id, 'app-cliente')
+    });
 </script>
 
 </html>
